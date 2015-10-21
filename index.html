@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>yaksha by svaksha</title>
+    <title>Yaksha by svaksha</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/github-light.css">
@@ -16,8 +16,8 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1 class="header">yaksha</h1>
-        <p class="header">Dotfiles &amp; scripted daemons from @svaksha !</p>
+        <h1 class="header">Yaksha</h1>
+        <p class="header">Scripted automation daemons &amp; dotfiles from @svaksha !</p>
 
         <ul>
           <li class="download"><a class="buttons" href="https://github.com/svaksha/yaksha/zipball/master">Download ZIP</a></li>
@@ -33,39 +33,40 @@
         <h1>
 <a id="yaksha---my-personalized-dotfile-daimons" class="anchor" href="#yaksha---my-personalized-dotfile-daimons" aria-hidden="true"><span class="octicon octicon-link"></span></a>yaksha - my personalized dotfile daimons!</h1>
 
-<p>My personal daemons to automate my system installation/ updation/ backups, bash shell scripts, dotfiles and configuration files that are customized for my Linux box. These may (or not?) break your machine so apply the <strong>Standard Disclaimer</strong> : No warranty/guarantee for any particular use, express or implied and you agree to use <a href="http://svaksha.github.io/yaksha">these daimons</a> at your own risk and liability!</p>
+<p>My personal daemons to automate my system installation/ updation/ backups, bash shell scripts, dotfiles and configuration files that are customized for my Linux box. These may (or not?) break your machine so the <strong>Standard Disclaimer</strong> applies : No warranty/guarantee for any particular use, express or implied and you agree to use <a href="http://svaksha.github.io/yaksha">these daimons</a> at your own risk and liability!</p>
 
 <h2>
 <a id="content-index" class="anchor" href="#content-index" aria-hidden="true"><span class="octicon octicon-link"></span></a>Content Index</h2>
 
-<h4>
-<a id="programs" class="anchor" href="#programs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Programs</h4>
+<h3>
+<a id="programs" class="anchor" href="#programs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Programs</h3>
 
 <ul>
 <li>
 <code>yaksha-debos-backup.py</code> :: This daemon will take regular backups of my system using the attic python lib.</li>
 <li>
-<code>yaksha-debos-install.sh</code> :: Automated system installation shell script.</li>
+<code>yaksha-debu-install.sh</code> :: Automated system installation shell script.</li>
 <li>
-<code>yaksha-debos-uninstall.sh</code> :: An uninstall script (that should be used with care).</li>
+<code>yaksha-debu-uninstall.sh</code> :: An uninstall script (that should not be used if you dont know what it does).</li>
 <li>
-<code>yaksha-debos-update.sh</code> :: This daemon automagically updates my system.</li>
+<code>yaksha-debu-update.sh</code> :: This daemon automagically updates my system.</li>
 <li>
-<code>yaksha-jl-install.sh</code> :: A separate script for the Julia installation process.</li>
+<code>yaksha-jl-install.sh</code> :: A script for the Julia installation and build process.</li>
+<li>
+<code>yaksha-jl-update.sh</code> :: This script updates my Julia installation.</li>
 </ul>
 
-<h4>
-<a id="folders" class="anchor" href="#folders" aria-hidden="true"><span class="octicon octicon-link"></span></a>Folders</h4>
+<h3>
+<a id="folders" class="anchor" href="#folders" aria-hidden="true"><span class="octicon octicon-link"></span></a>Folders</h3>
 
 <ul>
 <li>
-<code>~/yaksha/*dotfiles</code> :: My dotfile folders for <code>.atom</code>, `<code>.julia</code>, <code>.vim</code>
-</li>
-<li>
-<code>~/yaksha/dotfiles-home</code> :: Home dotfiles.</li>
+<code>~/yaksha/home</code> :: Home dotfiles and folders for <code>.atom</code>, `<code>.julia</code>, <code>.vim</code>, ..</li>
 <li>
 <code>~/yaksha/scripts</code> :: General scripts.</li>
 </ul>
+
+<hr>
 
 <h1>
 <a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>LICENSE</h1>
