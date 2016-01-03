@@ -17,7 +17,7 @@
     <div class="wrapper">
       <header>
         <h1 class="header">Yaksha</h1>
-        <p class="header">System automation daemon scripts, dockerfiles &amp; dotfiles by @svaksha !</p>
+        <p class="header">Daemon scripts for system (install/update) automation scripts, dockerfiles &amp; dotfiles by @svaksha !</p>
 
         <ul>
           <li class="download"><a class="buttons" href="https://github.com/svaksha/yaksha/zipball/master">Download ZIP</a></li>
@@ -35,16 +35,19 @@
 
 <p><strong>My personal automation daimons!</strong></p>
 
-<p>Each time I installed and set up a new machine it was painful to remember what packages I had installed on my old machine and doing this manually was error-prone and a time-consuming process. Enter <a href="http://svaksha.github.io/yaksha" title="yaksha">YAKSHA</a>, meaning "demon" in Sanskrit, my personal automation daimons/daemons for Linux system installation, updation, backups, bash shell scripts, dockerfiles, dotfiles and configuration files to standardize my development environment by automating the installation process and organizing the various developer tools.</p>
+<p>Each time I installed and set up a new machine it was hard to remember every configuration setting I had changed and which packages I had installed over two years on the stable version of my Debian/Ubuntu machine. Doing this manually was a huge time-sink and an error-prone process resulting in annoying discrepancies and sometimes, dependency-hell. Enter <a href="http://svaksha.github.io/yaksha" title="yaksha">YAKSHA</a>, meaning "demon" in Sanskrit, my personal automation daimons/daemons for <strong>Linux system installation, updation, backups, bash shell scripts, dockerfiles, dotfiles and configuration files</strong>. Standardizing my development environment by automating the installation process and organizing the various developer tools was addictive fun!</p>
 
-<p><strong>Standard Disclaimer</strong> : No warranty and/or guarantee for any particular use, express or implied and you agree to use these <a href="http://svaksha.github.io/yaksha" title="yaksha">automation daimons</a> at your own risk and liability! </p>
+<p><strong>Change is the only constant in life</strong>, so as a programmer I constantly change and (try to) improve the configs and dotfiles in my attempt to keep optimizing the repo organization for ease of maintainence and extensibility. Config and dotfiles are meant to be personally unique for individuals, but if you wish to use this repository code and these configs, follow the <a href="https://github.com/svaksha/yaksha#installation">installation</a> instructions.</p>
+
+<h1>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>INSTALLATION</h1>
+
+<p>To try out these program scripts &amp; dotfiles, fork this repository, review the code, and remove the things you don’t require. Test them before use and most importantly, read the  <strong>License &amp; Disclaimer</strong> : No warranty and/or guarantee for any particular use, express or implied and you agree to use these <a href="http://svaksha.github.io/yaksha" title="yaksha">automation daimons</a> at your own risk and liability! </p>
 
 <h2>
-<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+<a id="system-dependencies" class="anchor" href="#system-dependencies" aria-hidden="true"><span class="octicon octicon-link"></span></a>System Dependencies</h2>
 
-<p>To try out these program scripts &amp; dotfiles, fork this repository, review the code, and remove the things you don’t require. Test them before use!
-Github offers HTTPS and SSH as transfer protocols or the repo can be downloaded as a <a href="https://github.com/svaksha/yaksha/archive/master.zip" title="download">zip-file</a> (latest 'master' branch). 
-<strong>Tip</strong>: You should have uploaded your <code>ssh</code> key to github and have <code>git</code> installed locally before issuing the <code>git</code> commands.</p>
+<p>At the outset, your Debian/Ubuntu machine should have the following core tools installed : <em>Git and Python</em>. Github offers HTTPS and SSH as transfer protocols or the repo can be downloaded as a <a href="https://github.com/svaksha/yaksha/archive/master.zip" title="download">zip-file</a> (latest 'master' branch). <strong>Tip</strong>: You should have uploaded your <code>ssh</code> key to github and have <code>git</code> installed locally before issuing the <code>git</code> commands on the terminal.</p>
 
 <ul>
 <li>For SSH protocol use the URL <code>ssh://git@github.com:svaksha/yaksha.git</code> via the clone command:</li>
@@ -58,10 +61,12 @@ Github offers HTTPS and SSH as transfer protocols or the repo can be downloaded 
 <li>After the repo is cloned into the <code>~/yaksha</code> folder, change directory with the command <code>cd yaksha</code> to run the scripts you need. My dotfiles are stored in <code>~/home</code> with symlinks.</li>
 </ul>
 
-<p>Here is a short description of contents (folders &amp; programs) of the <code>yaksha</code> repo - this will <strong>simplify</strong> the process with <strong>easy instructions</strong> and backed up older <strong>dotfiles/scripts</strong> to automate my machine setup of the following: </p>
+<p>The repository tree for <a href="http://svaksha.github.io/yaksha" title="yaksha">yaksha</a> is structured as follows: </p>
 
 <h3>
-<a id="programs" class="anchor" href="#programs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Programs</h3>
+<a id="1-programs" class="anchor" href="#1-programs" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. Programs</h3>
+
+<p>These programs are for package dependencies and OS-tasks:</p>
 
 <ul>
 <li>
@@ -85,25 +90,30 @@ Github offers HTTPS and SSH as transfer protocols or the repo can be downloaded 
 <li>
 <strong>yaks-deb-update.sh</strong> :: This daemon automagically updates my Debian/Ubuntu OS.</li>
 <li>
-<strong>yakshara-gccpy-install.sh</strong> :: Installs the programming language dependencies for <strong>C/C++ and the (scientific) Python</strong> developer stack - IPython Notebook, NumPy, Scipy, Pandas, Scikit-Learn, Matplotlib, etc.. </li>
+<strong>yaks-mail-todo.sh</strong> :: Mail the ToDo list.</li>
+</ul>
+
+<p>These programs will install the programming language package dependencies:</p>
+
+<ul>
+<li>
+<strong>yakshara-gccpy-install.sh</strong> :: Installs the programming language dependencies for <strong>C/C++, Fortran and the (scientific) Python</strong> developer stack - IPython Notebook, NumPy, Scipy, Pandas, Scikit-Learn, Matplotlib, etc.. </li>
 <li>
 <strong>yakshara-julia-install.sh</strong> :: A script for the <strong>Julia</strong> installation and build process.</li>
 <li>
 <strong>yakshara-julia-update.sh</strong> :: This script updates my <strong>Julia</strong> installation - I use the <em>master build</em>, so <strong>dont</strong> use this script if you are not comfortable with some breakage.</li>
 <li>
 <strong>yakshara-langs-install.sh</strong> :: Install programming language dependencies for <strong>Go, R, Ruby, Java and JS</strong>.</li>
-<li>
-<strong>yaks-mail-todo.sh</strong> :: Mail the ToDo list.</li>
 </ul>
 
 <h3>
-<a id="folders" class="anchor" href="#folders" aria-hidden="true"><span class="octicon octicon-link"></span></a>Folders</h3>
+<a id="2-folders" class="anchor" href="#2-folders" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. Folders</h3>
 
 <ul>
 <li>
 <strong>~/yaksha/dockerfiles/</strong> :: My dockerfiles.</li>
 <li>
-<strong>~/yaksha/home/</strong> :: Home dotfiles and folders for <code>.atom</code>, <code>.julia</code>, <code>.vim</code>, ..</li>
+<strong>~/yaksha/home/</strong> :: Home dotfiles and folders for <code>.atom</code>, <code>.julia</code>, <code>.vim</code>, etc..</li>
 <li>
 <strong>~/yaksha/scripts/</strong> :: General scripts.</li>
 </ul>
@@ -111,7 +121,7 @@ Github offers HTTPS and SSH as transfer protocols or the repo can be downloaded 
 <hr>
 
 <h1>
-<a id="copyright--license" class="anchor" href="#copyright--license" aria-hidden="true"><span class="octicon octicon-link"></span></a>Copyright &amp; License</h1>
+<a id="copyright--license" class="anchor" href="#copyright--license" aria-hidden="true"><span class="octicon octicon-link"></span></a>COPYRIGHT &amp; LICENSE</h1>
 
 <ul>
 <li>COPYRIGHT© 2005-Now <a href="http://svaksha.com/pages/Bio">SVAKSHA</a> All Rights Reserved. Copyrights for code when referenced and/or attributed to other people and/or entities belongs to them as listed in the files. </li>
