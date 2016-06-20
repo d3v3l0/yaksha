@@ -68,42 +68,9 @@
 <h3>
 <a id="1-programs" class="anchor" href="#1-programs" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1. Programs</h3>
 
-<p>These programs are for package dependencies and OS-tasks:</p>
-
 <ul>
 <li>
-<strong>yaksha.sh</strong> :: This daemon will run all the program scripts listed below automatically. {Note: use with care.}</li>
-<li>
-<strong>yaks-backup.py</strong> :: Take regular backups of my system using the attic python lib.</li>
-<li>
-<strong>yaks-mail-todo.sh</strong> :: Mail the ToDo list.</li>
-<li>
-<strong>yksh-apt-install.sh</strong> :: An automated system installation shell script for all new Debian Jessie machines that installs the following developer stack: 
-
-<ul>
-<li>Atom, Vim, basher, tab completion, curl, git, GNU core utils, etc..</li>
-<li>Anaconda, VirtualBox, Vagrant, Docker, etc..</li>
-<li>{Database}: MySQL, PostgreSQL, SQLite, MongoDB, etc..</li>
-<li>{Languages}: GCC, G++, Go, Python, Java, Javascript, R, Ruby, et al.</li>
-</ul>
-</li>
-<li>
-<strong>yksh-apt-firewall.sh</strong> :: A program firewall to secure the machine.</li>
-<li>
-<strong>yksh-apt-uninstall.sh</strong> :: An uninstall script (that should <strong>not</strong> be used if you dont know what it does).</li>
-<li>
-<strong>yaks-update.sh</strong> :: This daemon automagically updates my Debian OS.</li>
-</ul>
-
-<p>These programs will install the programming language package dependencies:</p>
-
-<ul>
-<li>
-<strong>yksh-vm-debian-8.sh</strong> :: The dependencies for a VM running debian-8 (jessie).</li>
-<li>
-<strong>yksh-git-julia.sh</strong> :: This script installs <strong>Julia</strong> and builds from unstable git master. {<strong>Nota Bene</strong>: I use the <em>master build</em>, so <em>dont</em> use this script if you are not comfortable with some (a lot of) breakage.}</li>
-<li>
-<strong>yksh-apt-julia-ppanightlies.sh</strong> :: This script installs the PPA nightlies for Julia. </li>
+<strong>yaksha.sh</strong> :: This daemon will be wired to run all the program scripts listed below automatically. {Not Recommended.}</li>
 </ul>
 
 <h3>
@@ -115,7 +82,60 @@
 <li>
 <strong>~/yaksha/home/</strong> :: Home dotfiles and config folders for <code>.julia</code>, <code>.vim</code>, etc..</li>
 <li>
-<strong>~/yaksha/scripts/</strong> :: General scripts that dont have a particular space.</li>
+<strong>~/yaksha/yksh/</strong> : Scripts for installing OS applications and the package dependencies.</li>
+</ul>
+
+<h4>
+<a id="yakshayksh--scripts-for-installing-os-applications-and-the-package-dependencies" class="anchor" href="#yakshayksh--scripts-for-installing-os-applications-and-the-package-dependencies" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>~/yaksha/yksh/ : Scripts for installing OS applications and the package dependencies.</h4>
+
+<ul>
+<li>
+<strong>apt-debian.sh</strong> :: An automated system installation shell script for all new Debian Jessie machines that installs the following developer stack: 
+
+<ul>
+<li>Atom, Vim, basher, tab completion, curl, git, GNU core utils, etc..</li>
+<li>Anaconda, VirtualBox, Vagrant, Docker, etc..</li>
+<li>{Database}: MySQL, PostgreSQL, SQLite, MongoDB, etc..</li>
+<li>{Languages}: GCC, G++, Go, Python, Java, Javascript, R, Ruby, et al.</li>
+</ul>
+</li>
+<li>
+<strong>apt-firewall.sh</strong> :: A program firewall to secure the machine.</li>
+<li>
+<strong>apt-kubuntu.sh</strong> :: A shell script for Kubuntu packages.</li>
+<li>
+<strong>apt-nonfree.sh</strong> :: As the filename says, all the non-free stuff gets installed.</li>
+<li>
+<strong>gitlab.sh</strong> :: Bash script to install the <code>gitlab</code> omnibus version. Use <strong>yksh-gitlab-omni.sh</strong> instead.</li>
+<li>
+<strong>gitlab-omni.sh</strong> :: Program to automatically check the OS and install the <code>gitlab</code> version.</li>
+<li>
+<strong>julia-dev.sh</strong> :: This script installs <strong>Julia</strong> and builds from the unstable master on github. {<strong>Nota Bene</strong>: I use the <em>master build</em>, so <em>dont</em> use this script if you want stable Julia packages - some packages may have bugs and may not work with the unstable builds.}</li>
+<li>
+<strong>julia-stable.sh</strong> :: A script to install the generic Linux 64-bit binaries for Julia stable releases only. </li>
+<li>
+<strong>py-anaconda.sh</strong> :: Installs Anaconda3.</li>
+<li>
+<strong>vm-debian8.sh</strong> :: {WIP} The dependencies for a VM running debian-8 (jessie).</li>
+<li>
+<strong>zyppr-opensuse.sh</strong> :: The shell script for RPM-based OpenSUSE packages.</li>
+</ul>
+
+<h4>
+<a id="yakshayak--system-update-upgrade-and-backup-scripts" class="anchor" href="#yakshayak--system-update-upgrade-and-backup-scripts" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>~/yaksha/yak : System update (upgrade) and backup scripts.</h4>
+
+<ul>
+<li>
+<strong>backup.py</strong> :: Take regular backups of my system using the attic python lib.</li>
+<li>
+<strong>docker-start-vm.sh</strong> :: WIP.</li>
+<li>
+<strong>gitup.sh</strong> :: Automagically update all the local GIT repos.</li>
+<li>
+<strong>julia-update.sh</strong> :: Updates and builds the julia unstable master installed via <code>julia-stable.sh</code>
+</li>
+<li>
+<strong>update-os.sh</strong> :: This daemon automagically updates my Debian OS.</li>
 </ul>
 
 <hr>
