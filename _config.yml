@@ -1,0 +1,8 @@
+title: Yaksha
+description: Daemon scripts for system (install/update) automation scripts, dockerfiles & dotfiles by @svaksha !
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-dinky
+
+gems:
+  - jekyll-mentions
